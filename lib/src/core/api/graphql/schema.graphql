@@ -1,0 +1,29 @@
+directive @cacheControl(maxAge: Int, scope: CacheControlScope) on FIELD_DEFINITION | OBJECT | INTERFACE
+
+enum CacheControlScope {
+  PUBLIC
+  PRIVATE
+}
+
+type Character {
+  id: ID
+  name: String
+  gender: String
+  image: String
+}
+
+type Characters {
+  info: Info
+  results: [Character]
+}
+
+type Info {
+  count: Int
+  pages: Int
+  next: Int
+  prev: Int
+}
+
+type Query {
+  characters(page: Int): Characters
+}

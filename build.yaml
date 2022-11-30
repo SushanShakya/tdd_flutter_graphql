@@ -5,11 +5,7 @@ targets:
         enabled: true
         options:
           schema: tdd_flutter_graphql|lib/src/core/api/graphql/schema.graphql
-        generate_for:
-          - lib/src/core/api/graphql/**
       ferry_generator|serializer_builder:
         enabled: true
         options:
           schema: tdd_flutter_graphql|lib/src/core/api/graphql/schema.graphql
-        generate_for:
-          - lib/src/core/api/graphql/**
